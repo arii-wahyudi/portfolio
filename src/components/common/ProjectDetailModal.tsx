@@ -22,6 +22,8 @@ export function ProjectDetailModal({
 }: ProjectDetailModalProps) {
   if (!project) return null;
 
+  const hasLinks = Boolean(project.githubUrl || project.demoUrl);
+
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <DialogContent
@@ -41,30 +43,34 @@ export function ProjectDetailModal({
             {project.shortDescription}
           </DialogDescription>
 
-          {/* Action Links */}
-          <div className="flex flex-wrap items-center gap-2.5 pt-2">
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium border border-[var(--border-color)] bg-[var(--bg-primary)] hover:border-[var(--primary-blue)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-blue)]"
-            >
-              <GitBranch className="w-3.5 h-3.5" />
-              <span>Source Code</span>
-            </a>
+          {/* Action Links - only rendered if URLs exist */}
+          {hasLinks && (
+            <div className="flex flex-wrap items-center gap-2.5 pt-2">
+              {project.githubUrl && (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium border border-[var(--border-color)] bg-[var(--bg-primary)] hover:border-[var(--primary-blue)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-blue)]"
+                >
+                  <GitBranch className="w-3.5 h-3.5" />
+                  <span>Source Code</span>
+                </a>
+              )}
 
-            {project.demoUrl && (
-              <a
-                href={project.demoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium bg-[var(--primary-blue)] hover:bg-[var(--primary-hover)] text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-blue)]"
-              >
-                <ExternalLink className="w-3.5 h-3.5" />
-                <span>Live Demo</span>
-              </a>
-            )}
-          </div>
+              {project.demoUrl && (
+                <a
+                  href={project.demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium bg-[var(--primary-blue)] hover:bg-[var(--primary-hover)] text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-blue)]"
+                >
+                  <ExternalLink className="w-3.5 h-3.5" />
+                  <span>Live Demo</span>
+                </a>
+              )}
+            </div>
+          )}
         </DialogHeader>
 
         {/* Modal Body Sections */}

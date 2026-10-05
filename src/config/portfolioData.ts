@@ -4,10 +4,7 @@ import projectPlaceholder from '@/assets/projects/project-placeholder.svg';
 
 /**
  * Portfolio Data Configuration
- * Single source of truth for all portfolio content.
- * 
- * NOTE: Values containing [YOUR ...] or [NEEDS USER INPUT]
- * are personal placeholders designed to be easily replaced by the developer.
+ * Single source of truth for all personal content, projects, and contact channels.
  */
 export const portfolioData: PortfolioData = {
   navigation: [
@@ -19,157 +16,161 @@ export const portfolioData: PortfolioData = {
   ],
 
   personal: {
-    name: '[YOUR NAME]',
+    name: 'Ari Wahyudi',
     role: 'Web Developer',
-    headline: 'Building fast, intentional, and accessible web experiences.',
+    headline: 'Pengembangan Aplikasi Web Berbasis Database yang Terstruktur & Responsif.',
     subheadline:
-      'A Web Developer focused on clean frontend architecture, responsive design systems, and robust full-stack integration.',
+      'Mahasiswa Teknik Informatika yang berfokus pada pembuatan aplikasi web fungsional menggunakan PHP, MySQL, dan antarmuka responsif.',
     portraitUrl: portraitPlaceholder,
 
-    // About Section structured blocks per PRD
+    // About Section structured blocks
     shortIntro:
-      'Web Developer with a strong foundation in modern web standards, component architecture, and responsive design. Passionate about turning complex problem spaces into intuitive, high-performance digital tools that users love to navigate.',
+      'Saya Ari Wahyudi, mahasiswa Teknik Informatika yang berfokus pada pengembangan web. Memiliki minat mendalam dalam membangun aplikasi web yang fungsional, terstruktur, dan mampu memecahkan permasalahan operasional secara efisien.',
     developmentFocus:
-      'Prioritizing clean modular code, accessible UI components adhering to WCAG AA guidelines, predictable state handling, and optimal frontend performance metrics across desktop and mobile form factors.',
+      'Terbiasa mengembangkan aplikasi CRUD, dashboard manajemen, dan sistem berbasis database menggunakan PHP dan MySQL, dengan antarmuka yang bersih serta responsif menggunakan Bootstrap, JavaScript, jQuery, AJAX, dan CSS.',
     howIWork:
-      'I approach software engineering with intentionality: decomposing user workflows into atomic components, maintaining strict type safety, validating accessibility early, and avoiding unnecessary dependencies.',
+      'Alur kerja saya berfokus pada pemahaman kebutuhan sistem secara menyeluruh, merancang relasi struktur data dan fitur, membangun kode secara bertahap, melakukan pengujian fungsional, serta melakukan perbaikan berkelanjutan berdasarkan hasil evaluasi.',
     currentFocus:
-      'Deepening expertise in full-stack TypeScript patterns, design token workflows, micro-interaction ergonomics, and lighthouse performance optimization.',
+      'Saat ini sedang aktif memperluas wawasan dan kemampuan pada teknologi web modern, khususnya React dan TypeScript, melalui eksplorasi dan implementasi proyek praktis.',
   },
 
   skills: [
     {
       title: 'Programming Languages',
       skills: [
-        { name: 'TypeScript' },
-        { name: 'JavaScript (ESNext)' },
-        { name: 'HTML5 & Semantic Web' },
-        { name: 'CSS3 & Modern Layouts' },
-        { name: '[Language Placeholder]', isExploring: true },
+        { name: 'PHP' },
+        { name: 'JavaScript' },
+        { name: 'HTML' },
+        { name: 'CSS' },
       ],
     },
     {
       title: 'Frontend Development',
       skills: [
-        { name: 'React' },
-        { name: 'Tailwind CSS' },
-        { name: 'Next.js / Vite' },
-        { name: 'Accessible UI Primitives' },
-        { name: '[Exploring Frontend Tech]', isExploring: true },
+        { name: 'Bootstrap' },
+        { name: 'jQuery' },
+        { name: 'AJAX' },
+        { name: 'Responsive Web Design' },
+        { name: 'React', isExploring: true },
+        { name: 'TypeScript', isExploring: true },
       ],
     },
     {
       title: 'Backend & Database',
       skills: [
-        { name: 'RESTful API Integration' },
-        { name: 'Node.js / Express' },
-        { name: 'SQL & Relational Schema' },
-        { name: '[Exploring Backend Tech]', isExploring: true },
+        { name: 'PHP' },
+        { name: 'MySQL' },
       ],
     },
     {
       title: 'Tools & Workflow',
       skills: [
-        { name: 'Git & GitHub Workflow' },
-        { name: 'VS Code & Chrome DevTools' },
-        { name: 'ESLint & Prettier' },
-        { name: 'Figma & Design Tokens' },
+        { name: 'Git' },
+        { name: 'GitHub' },
+        { name: 'VS Code' },
+        { name: 'DataTables' },
+        { name: 'JsQR' },
       ],
     },
   ],
 
   projects: [
     {
-      id: 'project-1',
-      title: 'Enterprise Analytics Dashboard [Project 1]',
+      id: 'spk-kredit-moora',
+      title: 'SPK Kelayakan Pemberian Kredit Anggota Koperasi Konsumen Serba Usaha menggunakan Metode MOORA',
       shortDescription:
-        'A comprehensive data monitoring dashboard featuring interactive visualization charts, responsive filter controls, and real-time metric tracking.',
+        'Sistem pendukung keputusan berbasis web untuk membantu penilaian kelayakan pemberian kredit anggota koperasi menggunakan metode MOORA.',
       thumbnail: projectPlaceholder,
-      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
-      githubUrl: 'https://github.com/[YOUR GITHUB USERNAME]/analytics-dashboard',
-      demoUrl: 'https://[YOUR DEMO URL 1]',
+      technologies: ['PHP', 'MySQL', 'Bootstrap', 'CSS'],
+      githubUrl: undefined,
+      demoUrl: undefined,
       problem:
-        'Users experienced significant latency and visual clutter when monitoring complex operational datasets across multiple disparate views.',
+        'Sistem dibuat untuk membantu proses penilaian kelayakan pemberian kredit anggota koperasi berdasarkan beberapa kriteria penilaian.',
       solution:
-        'Architected a modular component library featuring memoized chart widgets, unified filter state, and responsive breakdown cards optimized for fast data rendering.',
+        'Menggunakan sistem pendukung keputusan berbasis web dengan metode MOORA untuk melakukan kalkulasi objektif dan menghasilkan perangkingan alternatif secara otomatis.',
       keyFeatures: [
-        'Interactive telemetry charts with customizable range filters',
-        'Responsive layout scaling seamlessly from 375px mobile to ultrawide displays',
-        'Strict type contracts for all API request and response models',
+        'Pengelolaan data anggota dan calon penerima kredit',
+        'Pengelolaan data kriteria penilaian serta bobot preferensi',
+        'Kalkulasi normalisasi matriks dan penilaian akhir metode MOORA',
+        'Penyajian hasil perangkingan rekomendasi kelayakan kredit',
       ],
       myRole:
-        'Lead frontend development: designed component architecture, integrated data layers, and ensured compliance with WCAG contrast requirements.',
+        'Web application development dan implementasi algoritma sistem pendukung keputusan.',
     },
     {
-      id: 'project-2',
-      title: 'Collaborative Workspace Platform [Project 2]',
+      id: 'toko-eskrim',
+      title: 'Toko Eskrim',
       shortDescription:
-        'A productivity and documentation platform designed for technical teams to organize specifications, workflows, and task progress.',
+        'Aplikasi web untuk mendukung pengelolaan katalog produk, varian menu, dan proses pencatatan transaksi toko.',
       thumbnail: projectPlaceholder,
-      technologies: ['TypeScript', 'React', 'REST API', 'Tailwind CSS'],
-      githubUrl: 'https://github.com/[YOUR GITHUB USERNAME]/workspace-platform',
-      demoUrl: 'https://[YOUR DEMO URL 2]',
+      technologies: ['PHP', 'MySQL', 'Bootstrap', 'JavaScript', 'jQuery', 'JsQR', 'CSS'],
+      githubUrl: undefined,
+      demoUrl: undefined,
       problem:
-        'Engineering teams required a frictionless interface to manage technical documentation without navigating cumbersome administrative interfaces.',
+        'Sistem digunakan untuk membantu pengelolaan data produk dan efisiensi pencatatan proses transaksi penjualan toko.',
       solution:
-        'Engineered an intuitive SPA layout with instant search filtering, keyboard shortcuts, and clean modal dialogs for item inspection.',
+        'Aplikasi web berbasis PHP dan MySQL dengan antarmuka Bootstrap serta JavaScript/jQuery untuk mendukung manajemen data katalog dan kelancaran transaksi.',
       keyFeatures: [
-        'Keyboard-driven modal interactions and quick-search navigation',
-        'Decoupled UI state ensuring smooth 60fps view transitions',
-        'Accessible color modes with full dark and light theme parity',
+        'Pengelolaan kategori produk dan varian menu toko',
+        'Pencatatan dan pemrosesan data transaksi penjualan',
+        'Penyajian riwayat dan informasi detail transaksi',
+        'Dashboard admin untuk pemantauan operasional toko',
       ],
       myRole:
-        'Implemented core interaction flows, accessible modal primitives, and state synchronization across views.',
+        'Web application development dan penyusunan struktur database.',
     },
     {
-      id: 'project-3',
-      title: 'Developer Resource Portal [Project 3]',
+      id: 'aw-vapestore',
+      title: 'AW Vapestore',
       shortDescription:
-        'A curated technical catalog and documentation browser connecting developers to vetted tools, guidelines, and code snippets.',
+        'Aplikasi manajemen toko dan inventaris dengan fitur monitoring stok, pemindaian QR code, serta interaksi tabel asinkronus.',
       thumbnail: projectPlaceholder,
-      technologies: ['JavaScript', 'React', 'Web APIs', 'Tailwind CSS'],
-      githubUrl: 'https://github.com/[YOUR GITHUB USERNAME]/resource-portal',
-      demoUrl: 'https://[YOUR DEMO URL 3]',
+      technologies: ['PHP', 'MySQL', 'Bootstrap', 'JavaScript', 'jQuery', 'AJAX', 'DataTables', 'JsQR', 'CSS'],
+      githubUrl: undefined,
+      demoUrl: undefined,
       problem:
-        'Developers frequently lost time searching across fragmented bookmarks and unverified code snippets.',
+        'Membantu pengelolaan katalog produk, manajemen varian barang, pemantauan stok, dan pencatatan transaksi pada toko.',
       solution:
-        'Created a centralized catalog with tag-based categorization, single-click code copying, and client-side offline caching.',
+        'Aplikasi web dengan PHP dan MySQL yang memanfaatkan AJAX untuk interaksi data tanpa reload, DataTables untuk pengelolaan tabel interaktif, serta JsQR untuk kebutuhan scanning.',
       keyFeatures: [
-        'Fast client-side category filtering with zero network lag',
-        'One-click copy to clipboard with tactile visual confirmation',
-        'Lightweight bundle footprint under 50KB gzip for fast initial paint',
+        'Pengelolaan data kategori dan katalog barang',
+        'Pengelolaan varian produk dan kontrol jumlah stok',
+        'Pencatatan transaksi penjualan kasir',
+        'Dashboard ringkasan informasi dan aktivitas toko',
+        'Fitur scanning kode menggunakan library JsQR',
+        'Penyajian data dinamis dengan DataTables dan interaksi AJAX',
       ],
       myRole:
-        'Designed information architecture, implemented client-side search logic, and optimized asset delivery.',
+        'Web application development dan implementasi fitur sistem secara terintegrasi.',
     },
   ],
 
   contact: {
-    email: '[YOUR EMAIL: e.g. developer@example.com]',
-    githubUrl: 'https://github.com/[YOUR GITHUB USERNAME]',
-    linkedinUrl: 'https://linkedin.com/in/[YOUR LINKEDIN USERNAME]',
-    instagramUrl: 'https://instagram.com/[YOUR INSTAGRAM USERNAME]',
+    email: 'wahyudiari264@gmail.com',
+    githubUrl: 'https://github.com/arii-wahyudi',
+    linkedinUrl: 'https://www.linkedin.com/in/ari-wahyudi-b82456246/',
+    instagramUrl: 'https://www.instagram.com/ari.wahyudi_a03/',
     socials: [
       {
         platform: 'email',
         label: 'Email',
-        url: 'mailto:[YOUR EMAIL: e.g. developer@example.com]',
+        url: 'mailto:wahyudiari264@gmail.com',
         isPrimary: true,
       },
       {
         platform: 'github',
         label: 'GitHub',
-        url: 'https://github.com/[YOUR GITHUB USERNAME]',
+        url: 'https://github.com/arii-wahyudi',
       },
       {
         platform: 'linkedin',
         label: 'LinkedIn',
-        url: 'https://linkedin.com/in/[YOUR LINKEDIN USERNAME]',
+        url: 'https://www.linkedin.com/in/ari-wahyudi-b82456246/',
       },
       {
         platform: 'instagram',
         label: 'Instagram',
-        url: 'https://instagram.com/[YOUR INSTAGRAM USERNAME]',
+        url: 'https://www.instagram.com/ari.wahyudi_a03/',
       },
     ],
   },

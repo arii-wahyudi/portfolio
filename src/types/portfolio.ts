@@ -32,7 +32,7 @@ export interface Project {
   shortDescription: string;
   thumbnail: string;
   technologies: string[];
-  githubUrl: string;
+  githubUrl?: string;
   demoUrl?: string;
   problem: string;
   solution: string;
