@@ -53,7 +53,7 @@ export function Projects() {
           {projects.map((project, index) => (
             <ScrollReveal
               key={project.id}
-              delay={index * 0.1}
+              delay={index * 0.08}
               className="flex flex-col justify-between rounded-2xl bg-[var(--bg-surface)]/70 backdrop-blur-sm border border-[var(--border-color)] overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[var(--primary-blue)]/50 hover:shadow-lg group"
             >
               {/* Card Top: 16:9 Thumbnail Image Container */}
@@ -63,7 +63,7 @@ export function Projects() {
                     src={project.thumbnail}
                     alt={`${project.title} screenshot`}
                     onError={() => handleImageError(project.id)}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
                   />
                 ) : (
                   /* Clean intentional fallback illustration for placeholder screenshots */
@@ -107,7 +107,7 @@ export function Projects() {
                     <Badge
                       key={tech}
                       variant="secondary"
-                      className="px-2 py-0.5 text-[11px]"
+                      className="px-2.5 py-0.5 text-[11px]"
                     >
                       {tech}
                     </Badge>
@@ -121,25 +121,25 @@ export function Projects() {
               </div>
 
               {/* Card Footer: Action Buttons */}
-              <div className="px-6 py-4 border-t border-[var(--border-color)]/70 flex items-center justify-between gap-3 bg-[var(--bg-primary)]/40">
+              <div className="px-6 py-3.5 border-t border-[var(--border-color)]/70 flex items-center justify-between gap-3 bg-[var(--bg-primary)]/40">
                 <Button
                   variant="outline"
                   size="sm"
                   onClick={() => handleOpenDetail(project)}
-                  className="text-xs font-medium flex items-center gap-1.5 cursor-pointer hover:border-[var(--primary-blue)] hover:text-[var(--primary-blue)]"
+                  className="text-xs font-medium flex items-center gap-1.5 cursor-pointer hover:border-[var(--primary-blue)] hover:text-[var(--primary-blue)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-blue)]"
                 >
                   <span>Detail</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Button>
 
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-1.5">
                   {project.demoUrl && (
                     <a
                       href={project.demoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`${project.title} live demo`}
-                      className="p-1.5 rounded-md text-[var(--text-muted)] hover:text-[var(--primary-blue)] hover:bg-[var(--bg-surface)] transition-colors"
+                      className="p-2 rounded-md text-[var(--text-muted)] hover:text-[var(--primary-blue)] hover:bg-[var(--bg-surface)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-blue)]"
                     >
                       <ExternalLink className="w-4 h-4" />
                     </a>
@@ -150,7 +150,7 @@ export function Projects() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`${project.title} GitHub repository`}
-                    className="p-1.5 rounded-md text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-surface)] transition-colors"
+                    className="p-2 rounded-md text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-surface)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-blue)]"
                   >
                     <GitBranch className="w-4 h-4" />
                   </a>

@@ -74,7 +74,7 @@ export function Skills() {
                         className="px-3 py-1 text-xs gap-1.5 transition-transform hover:-translate-y-0.5"
                       >
                         <span>{skill.name}</span>
-                        <span className="text-[10px] px-1 py-0.2 rounded uppercase tracking-wider bg-[var(--primary-blue)]/20 font-sans font-semibold">
+                        <span className="text-[10px] px-1.5 py-0.5 rounded uppercase tracking-wider bg-[var(--primary-blue)]/20 font-sans font-semibold">
                           Exploring
                         </span>
                       </Badge>

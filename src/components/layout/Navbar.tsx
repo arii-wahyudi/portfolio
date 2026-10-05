@@ -27,28 +27,28 @@ export function Navbar() {
   };
 
   return (
-    <header className="fixed top-4 inset-x-0 mx-auto z-50 px-4 w-full max-w-[850px]">
+    <header className="fixed top-4 inset-x-0 mx-auto z-50 px-4 w-full max-w-[760px]">
       {/* Floating Pill Container */}
       <nav
         aria-label="Main Navigation"
         className={`relative w-full rounded-full transition-all duration-300 ${
           isScrolled
-            ? 'bg-[var(--bg-surface)]/80 dark:bg-[#111827]/80 light:bg-white/80 backdrop-blur-md border border-[var(--border-color)] shadow-sm'
+            ? 'bg-[var(--bg-surface)]/85 dark:bg-[#111827]/85 light:bg-white/90 backdrop-blur-md border border-[var(--border-color)] shadow-sm'
             : 'bg-transparent border border-transparent'
         }`}
       >
-        <div className="flex items-center justify-between px-4 py-2 sm:px-5 sm:py-2.5">
+        <div className="flex items-center justify-between px-3.5 py-1.5 sm:px-4 sm:py-2">
           {/* Brand Logo */}
           <a
             href="#home"
-            className="text-sm font-semibold tracking-wider uppercase text-[var(--text-main)] hover:text-[var(--primary-blue)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-blue)] rounded-md px-1"
+            className="text-xs sm:text-sm font-semibold tracking-wider uppercase text-[var(--text-main)] hover:text-[var(--primary-blue)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-blue)] rounded-md px-2 py-1"
           >
             PORTFOLIO
           </a>
 
           {/* Desktop Navigation Links */}
           <div
-            className="hidden md:flex items-center gap-1"
+            className="hidden md:flex items-center gap-0.5"
             onMouseLeave={() => setHoveredHref(null)}
           >
             {portfolioData.navigation.map((item) => (
@@ -56,7 +56,7 @@ export function Navbar() {
                 key={item.href}
                 href={item.href}
                 onMouseEnter={() => setHoveredHref(item.href)}
-                className="relative px-3.5 py-1.5 text-xs lg:text-sm font-medium text-[var(--text-muted)] hover:text-[var(--text-main)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-blue)] rounded-full"
+                className="relative px-3 py-1.5 text-xs lg:text-sm font-medium text-[var(--text-muted)] hover:text-[var(--text-main)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-blue)] rounded-full"
               >
                 {hoveredHref === item.href && (
                   <motion.div
@@ -75,16 +75,16 @@ export function Navbar() {
           </div>
 
           {/* Right Action: Theme Toggle & Mobile Hamburger */}
-          <div className="flex items-center gap-1.5 sm:gap-2">
+          <div className="flex items-center gap-1 sm:gap-1.5">
             <ThemeToggle />
 
-            {/* Mobile Menu Button */}
+            {/* Mobile Menu Button with 40px touch area */}
             <button
               type="button"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label={isMobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
               aria-expanded={isMobileMenuOpen}
-              className="md:hidden flex items-center justify-center w-9 h-9 rounded-full text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-slate-800/40 dark:hover:bg-slate-800/60 light:hover:bg-slate-200/60 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-blue)]"
+              className="md:hidden flex items-center justify-center w-10 h-10 rounded-full text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-slate-800/40 dark:hover:bg-slate-800/60 light:hover:bg-slate-200/60 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-blue)]"
             >
               {isMobileMenuOpen ? (
                 <X className="w-5 h-5" />
@@ -104,7 +104,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -8, scale: 0.98 }}
             transition={{ duration: 0.2, ease: 'easeOut' }}
-            className="md:hidden mt-2 p-4 rounded-2xl bg-[var(--bg-surface)]/95 dark:bg-[#111827]/95 light:bg-white/95 backdrop-blur-lg border border-[var(--border-color)] shadow-xl"
+            className="md:hidden mt-2 p-3.5 rounded-2xl bg-[var(--bg-surface)]/95 dark:bg-[#111827]/95 light:bg-white/95 backdrop-blur-lg border border-[var(--border-color)] shadow-xl"
           >
             <ul className="flex flex-col gap-1">
               {portfolioData.navigation.map((item) => (

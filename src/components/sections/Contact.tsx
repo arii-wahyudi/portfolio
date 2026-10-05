@@ -76,12 +76,12 @@ export function Contact() {
                   type="button"
                   onClick={handleCopyEmail}
                   aria-label="Copy email address"
-                  className="flex items-center gap-1.5 px-2.5 py-1 rounded text-xs font-medium text-[var(--text-muted)] hover:text-[var(--primary-blue)] hover:bg-[var(--bg-surface)] transition-colors cursor-pointer shrink-0"
+                  className="flex items-center gap-1.5 px-2.5 py-1.5 rounded text-xs font-medium text-[var(--text-muted)] hover:text-[var(--primary-blue)] hover:bg-[var(--bg-surface)] transition-colors cursor-pointer shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-blue)]"
                 >
                   {copied ? (
                     <>
                       <Check className="w-3.5 h-3.5 text-emerald-500" />
-                      <span className="text-emerald-500 text-[11px]">Copied!</span>
+                      <span className="text-emerald-500 text-[11px] font-medium">Copied!</span>
                     </>
                   ) : (
                     <>
@@ -94,7 +94,7 @@ export function Contact() {
 
               <a
                 href={`mailto:${contact.email}`}
-                className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-md text-sm font-medium bg-[var(--primary-blue)] hover:bg-[var(--primary-hover)] text-white transition-colors shadow-sm"
+                className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg text-sm font-medium bg-[var(--primary-blue)] hover:bg-[var(--primary-hover)] text-white transition-colors shadow-xs hover:shadow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-blue)]"
               >
                 <Send className="w-4 h-4" />
                 <span>Kirim Email Langsung</span>
@@ -126,7 +126,7 @@ export function Contact() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-between p-3 rounded-lg border border-[var(--border-color)] bg-[var(--bg-primary)]/50 hover:bg-[var(--bg-primary)] hover:border-[var(--primary-blue)]/50 text-[var(--text-main)] transition-colors group"
+                    className="flex items-center justify-between p-3 rounded-lg border border-[var(--border-color)] bg-[var(--bg-primary)]/50 hover:bg-[var(--bg-primary)] hover:border-[var(--primary-blue)]/50 text-[var(--text-main)] transition-colors group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-blue)]"
                   >
                     <div className="flex items-center gap-3">
                       <span className="text-[var(--text-muted)] group-hover:text-[var(--primary-blue)] transition-colors">

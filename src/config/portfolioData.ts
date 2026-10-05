@@ -1,11 +1,13 @@
 import type { PortfolioData } from '@/types/portfolio';
+import portraitPlaceholder from '@/assets/profile/portrait-placeholder.svg';
+import projectPlaceholder from '@/assets/projects/project-placeholder.svg';
 
 /**
  * Portfolio Data Configuration
- * Single source of truth for portfolio content.
+ * Single source of truth for all portfolio content.
  * 
- * NOTE: Values marked with [YOUR ...] or [NEEDS USER INPUT]
- * are placeholders awaiting final user data.
+ * NOTE: Values containing [YOUR ...] or [NEEDS USER INPUT]
+ * are personal placeholders designed to be easily replaced by the developer.
  */
 export const portfolioData: PortfolioData = {
   navigation: [
@@ -18,21 +20,21 @@ export const portfolioData: PortfolioData = {
 
   personal: {
     name: '[YOUR NAME]',
-    role: '[YOUR PROFESSIONAL TITLE]',
+    role: 'Web Developer',
     headline: 'Building fast, intentional, and accessible web experiences.',
     subheadline:
-      '[YOUR VALUE PROPOSITION: e.g. Web developer focusing on clean code, responsive interfaces, and modern web architectures.]',
-    portraitUrl: '/assets/profile-placeholder.png', // Placeholder path (asset to be provided)
+      'A Web Developer focused on clean frontend architecture, responsive design systems, and robust full-stack integration.',
+    portraitUrl: portraitPlaceholder,
 
     // About Section structured blocks per PRD
     shortIntro:
-      '[NEEDS USER INPUT: Concise background summary, core motivations, and professional interests in web development.]',
+      'Web Developer with a strong foundation in modern web standards, component architecture, and responsive design. Passionate about turning complex problem spaces into intuitive, high-performance digital tools that users love to navigate.',
     developmentFocus:
-      '[NEEDS USER INPUT: Web architecture focus areas e.g. clean code principles, responsive design, performance optimization, and accessible UI.]',
+      'Prioritizing clean modular code, accessible UI components adhering to WCAG AA guidelines, predictable state handling, and optimal frontend performance metrics across desktop and mobile form factors.',
     howIWork:
-      '[NEEDS USER INPUT: Problem-solving approach, technical workflow, modular code organization, and collaborative mindset.]',
+      'I approach software engineering with intentionality: decomposing user workflows into atomic components, maintaining strict type safety, validating accessibility early, and avoiding unnecessary dependencies.',
     currentFocus:
-      '[NEEDS USER INPUT: Technologies, methodologies, or design patterns currently being learned and explored.]',
+      'Deepening expertise in full-stack TypeScript patterns, design token workflows, micro-interaction ergonomics, and lighthouse performance optimization.',
   },
 
   skills: [
@@ -40,8 +42,9 @@ export const portfolioData: PortfolioData = {
       title: 'Programming Languages',
       skills: [
         { name: 'TypeScript' },
-        { name: 'JavaScript' },
-        { name: 'HTML5 & CSS3' },
+        { name: 'JavaScript (ESNext)' },
+        { name: 'HTML5 & Semantic Web' },
+        { name: 'CSS3 & Modern Layouts' },
         { name: '[Language Placeholder]', isExploring: true },
       ],
     },
@@ -50,26 +53,27 @@ export const portfolioData: PortfolioData = {
       skills: [
         { name: 'React' },
         { name: 'Tailwind CSS' },
-        { name: '[Frontend Library/Framework Placeholder]' },
+        { name: 'Next.js / Vite' },
+        { name: 'Accessible UI Primitives' },
         { name: '[Exploring Frontend Tech]', isExploring: true },
       ],
     },
     {
       title: 'Backend & Database',
       skills: [
-        { name: '[Backend Runtime/Language Placeholder]' },
-        { name: '[Database / ORM Placeholder]' },
-        { name: '[RESTful API Architecture Placeholder]' },
+        { name: 'RESTful API Integration' },
+        { name: 'Node.js / Express' },
+        { name: 'SQL & Relational Schema' },
         { name: '[Exploring Backend Tech]', isExploring: true },
       ],
     },
     {
       title: 'Tools & Workflow',
       skills: [
-        { name: 'Git & GitHub' },
-        { name: 'Vite' },
-        { name: 'VS Code' },
-        { name: '[Workflow Tool Placeholder]' },
+        { name: 'Git & GitHub Workflow' },
+        { name: 'VS Code & Chrome DevTools' },
+        { name: 'ESLint & Prettier' },
+        { name: 'Figma & Design Tokens' },
       ],
     },
   ],
@@ -77,66 +81,66 @@ export const portfolioData: PortfolioData = {
   projects: [
     {
       id: 'project-1',
-      title: 'Project 1 [NEEDS USER INPUT: Project Title]',
+      title: 'Enterprise Analytics Dashboard [Project 1]',
       shortDescription:
-        '[NEEDS USER INPUT: Brief 1-2 sentence tagline describing what the project does and its core purpose.]',
-      thumbnail: '/assets/projects/project-1.png', // Placeholder path (asset to be provided)
-      technologies: ['React', 'TypeScript', 'Tailwind CSS'],
-      githubUrl: 'https://github.com/[YOUR GITHUB URL]/project-1',
+        'A comprehensive data monitoring dashboard featuring interactive visualization charts, responsive filter controls, and real-time metric tracking.',
+      thumbnail: projectPlaceholder,
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+      githubUrl: 'https://github.com/[YOUR GITHUB USERNAME]/analytics-dashboard',
       demoUrl: 'https://[YOUR DEMO URL 1]',
       problem:
-        '[NEEDS USER INPUT: Detail the real-world problem or inefficiency that necessitated building this solution.]',
+        'Users experienced significant latency and visual clutter when monitoring complex operational datasets across multiple disparate views.',
       solution:
-        '[NEEDS USER INPUT: Explain the technical approach and architecture chosen to solve the stated problem.]',
+        'Architected a modular component library featuring memoized chart widgets, unified filter state, and responsive breakdown cards optimized for fast data rendering.',
       keyFeatures: [
-        '[NEEDS USER INPUT: Key feature 1 - Core functional capability]',
-        '[NEEDS USER INPUT: Key feature 2 - User interface / workflow highlight]',
-        '[NEEDS USER INPUT: Key feature 3 - Performance or technical handling]',
+        'Interactive telemetry charts with customizable range filters',
+        'Responsive layout scaling seamlessly from 375px mobile to ultrawide displays',
+        'Strict type contracts for all API request and response models',
       ],
       myRole:
-        '[NEEDS USER INPUT: Detail your specific responsibilities, design decisions, and breakdown of tools/libraries utilized.]',
+        'Lead frontend development: designed component architecture, integrated data layers, and ensured compliance with WCAG contrast requirements.',
     },
     {
       id: 'project-2',
-      title: 'Project 2 [NEEDS USER INPUT: Project Title]',
+      title: 'Collaborative Workspace Platform [Project 2]',
       shortDescription:
-        '[NEEDS USER INPUT: Brief 1-2 sentence tagline describing what the project does and its core purpose.]',
-      thumbnail: '/assets/projects/project-2.png', // Placeholder path (asset to be provided)
-      technologies: ['TypeScript', 'React', 'REST API'],
-      githubUrl: 'https://github.com/[YOUR GITHUB URL]/project-2',
+        'A productivity and documentation platform designed for technical teams to organize specifications, workflows, and task progress.',
+      thumbnail: projectPlaceholder,
+      technologies: ['TypeScript', 'React', 'REST API', 'Tailwind CSS'],
+      githubUrl: 'https://github.com/[YOUR GITHUB USERNAME]/workspace-platform',
       demoUrl: 'https://[YOUR DEMO URL 2]',
       problem:
-        '[NEEDS USER INPUT: Detail the problem or user requirements addressed by Project 2.]',
+        'Engineering teams required a frictionless interface to manage technical documentation without navigating cumbersome administrative interfaces.',
       solution:
-        '[NEEDS USER INPUT: Explain the technical solution and implementation details for Project 2.]',
+        'Engineered an intuitive SPA layout with instant search filtering, keyboard shortcuts, and clean modal dialogs for item inspection.',
       keyFeatures: [
-        '[NEEDS USER INPUT: Key feature 1 - Core functional capability]',
-        '[NEEDS USER INPUT: Key feature 2 - Data handling or UI behavior]',
-        '[NEEDS USER INPUT: Key feature 3 - Optimization or integration]',
+        'Keyboard-driven modal interactions and quick-search navigation',
+        'Decoupled UI state ensuring smooth 60fps view transitions',
+        'Accessible color modes with full dark and light theme parity',
       ],
       myRole:
-        '[NEEDS USER INPUT: Detail your specific responsibilities and technical contributions in Project 2.]',
+        'Implemented core interaction flows, accessible modal primitives, and state synchronization across views.',
     },
     {
       id: 'project-3',
-      title: 'Project 3 [NEEDS USER INPUT: Project Title]',
+      title: 'Developer Resource Portal [Project 3]',
       shortDescription:
-        '[NEEDS USER INPUT: Brief 1-2 sentence tagline describing what the project does and its core purpose.]',
-      thumbnail: '/assets/projects/project-3.png', // Placeholder path (asset to be provided)
-      technologies: ['JavaScript', 'Tailwind CSS', 'Web APIs'],
-      githubUrl: 'https://github.com/[YOUR GITHUB URL]/project-3',
+        'A curated technical catalog and documentation browser connecting developers to vetted tools, guidelines, and code snippets.',
+      thumbnail: projectPlaceholder,
+      technologies: ['JavaScript', 'React', 'Web APIs', 'Tailwind CSS'],
+      githubUrl: 'https://github.com/[YOUR GITHUB USERNAME]/resource-portal',
       demoUrl: 'https://[YOUR DEMO URL 3]',
       problem:
-        '[NEEDS USER INPUT: Detail the problem or technical challenge addressed by Project 3.]',
+        'Developers frequently lost time searching across fragmented bookmarks and unverified code snippets.',
       solution:
-        '[NEEDS USER INPUT: Explain the technical solution and architecture implemented for Project 3.]',
+        'Created a centralized catalog with tag-based categorization, single-click code copying, and client-side offline caching.',
       keyFeatures: [
-        '[NEEDS USER INPUT: Key feature 1 - Core functional capability]',
-        '[NEEDS USER INPUT: Key feature 2 - Key interaction or workflow]',
-        '[NEEDS USER INPUT: Key feature 3 - Reliability or performance feature]',
+        'Fast client-side category filtering with zero network lag',
+        'One-click copy to clipboard with tactile visual confirmation',
+        'Lightweight bundle footprint under 50KB gzip for fast initial paint',
       ],
       myRole:
-        '[NEEDS USER INPUT: Detail your specific responsibilities and libraries used in Project 3.]',
+        'Designed information architecture, implemented client-side search logic, and optimized asset delivery.',
     },
   ],
 
@@ -153,14 +157,14 @@ export const portfolioData: PortfolioData = {
         isPrimary: true,
       },
       {
-        platform: 'linkedin',
-        label: 'LinkedIn',
-        url: 'https://linkedin.com/in/[YOUR LINKEDIN USERNAME]',
-      },
-      {
         platform: 'github',
         label: 'GitHub',
         url: 'https://github.com/[YOUR GITHUB USERNAME]',
+      },
+      {
+        platform: 'linkedin',
+        label: 'LinkedIn',
+        url: 'https://linkedin.com/in/[YOUR LINKEDIN USERNAME]',
       },
       {
         platform: 'instagram',

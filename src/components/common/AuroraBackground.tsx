@@ -9,22 +9,22 @@ export function AuroraBackground() {
       className="fixed inset-0 pointer-events-none z-0 overflow-hidden select-none"
     >
       {/* Container with theme-dependent opacity and blend mode */}
-      <div className="relative w-full h-full opacity-70 dark:opacity-100 transition-opacity duration-500 hidden sm:block">
+      <div className="relative w-full h-full opacity-60 dark:opacity-90 transition-opacity duration-700 hidden sm:block">
         {/* Blob 1: Top-left deep primary glow */}
         <motion.div
-          className="absolute -top-[10vw] -left-[10vw] w-[45vw] h-[45vw] rounded-full filter blur-[100px] bg-[var(--aurora-primary)]"
+          className="absolute -top-[12vw] -left-[12vw] w-[42vw] h-[42vw] rounded-full filter blur-[110px] bg-[var(--aurora-primary)]"
           style={{ opacity: 'var(--aurora-opacity)' }}
           animate={
             shouldReduceMotion
               ? undefined
               : {
-                  x: ['0%', '8%', '-6%', '0%'],
-                  y: ['0%', '10%', '4%', '0%'],
-                  scale: [1, 1.1, 0.95, 1],
+                  x: ['0%', '6%', '-4%', '0%'],
+                  y: ['0%', '7%', '3%', '0%'],
+                  scale: [1, 1.06, 0.97, 1],
                 }
           }
           transition={{
-            duration: 24,
+            duration: 28,
             repeat: Infinity,
             repeatType: 'reverse',
             ease: 'easeInOut',
@@ -33,19 +33,19 @@ export function AuroraBackground() {
 
         {/* Blob 2: Center-right atmospheric accent glow */}
         <motion.div
-          className="absolute top-[30vh] -right-[15vw] w-[40vw] h-[40vw] rounded-full filter blur-[120px] bg-[var(--aurora-secondary)]"
+          className="absolute top-[32vh] -right-[12vw] w-[38vw] h-[38vw] rounded-full filter blur-[125px] bg-[var(--aurora-secondary)]"
           style={{ opacity: 'var(--aurora-opacity)' }}
           animate={
             shouldReduceMotion
               ? undefined
               : {
-                  x: ['0%', '-10%', '5%', '0%'],
-                  y: ['0%', '-8%', '8%', '0%'],
-                  scale: [1, 0.95, 1.12, 1],
+                  x: ['0%', '-7%', '4%', '0%'],
+                  y: ['0%', '-6%', '6%', '0%'],
+                  scale: [1, 0.96, 1.08, 1],
                 }
           }
           transition={{
-            duration: 28,
+            duration: 32,
             repeat: Infinity,
             repeatType: 'reverse',
             ease: 'easeInOut',
@@ -55,19 +55,19 @@ export function AuroraBackground() {
 
         {/* Blob 3: Bottom-center subtle secondary glow */}
         <motion.div
-          className="absolute -bottom-[10vh] left-[25vw] w-[38vw] h-[38vw] rounded-full filter blur-[110px] bg-[var(--aurora-primary)]"
-          style={{ opacity: 'calc(var(--aurora-opacity) * 0.8)' }}
+          className="absolute -bottom-[8vh] left-[28vw] w-[36vw] h-[36vw] rounded-full filter blur-[120px] bg-[var(--aurora-primary)]"
+          style={{ opacity: 'calc(var(--aurora-opacity) * 0.75)' }}
           animate={
             shouldReduceMotion
               ? undefined
               : {
-                  x: ['0%', '6%', '-8%', '0%'],
-                  y: ['0%', '-6%', '4%', '0%'],
-                  scale: [1, 1.08, 0.96, 1],
+                  x: ['0%', '5%', '-5%', '0%'],
+                  y: ['0%', '-4%', '3%', '0%'],
+                  scale: [1, 1.05, 0.98, 1],
                 }
           }
           transition={{
-            duration: 26,
+            duration: 30,
             repeat: Infinity,
             repeatType: 'reverse',
             ease: 'easeInOut',
