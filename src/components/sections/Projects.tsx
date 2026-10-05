@@ -132,31 +132,33 @@ export function Projects() {
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Button>
 
-                <div className="flex items-center gap-1.5">
-                  {project.demoUrl && (
-                    <a
-                      href={project.demoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`${project.title} live demo`}
-                      className="p-2 rounded-md text-[var(--text-muted)] hover:text-[var(--primary-blue)] hover:bg-[var(--bg-surface)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-blue)]"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                    </a>
-                  )}
+                {(project.demoUrl || project.githubUrl) && (
+                  <div className="flex items-center gap-1.5">
+                    {project.demoUrl && (
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${project.title} live demo`}
+                        className="p-2 rounded-md text-[var(--text-muted)] hover:text-[var(--primary-blue)] hover:bg-[var(--bg-surface)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-blue)]"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                      </a>
+                    )}
 
-                  {project.githubUrl && (
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`${project.title} GitHub repository`}
-                      className="p-2 rounded-md text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-surface)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-blue)]"
-                    >
-                      <GitBranch className="w-4 h-4" />
-                    </a>
-                  )}
-                </div>
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${project.title} GitHub repository`}
+                        className="p-2 rounded-md text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-surface)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-blue)]"
+                      >
+                        <GitBranch className="w-4 h-4" />
+                      </a>
+                    )}
+                  </div>
+                )}
               </div>
             </ScrollReveal>
           ))}

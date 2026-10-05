@@ -41,6 +41,7 @@ export function Navbar() {
           {/* Brand Logo */}
           <a
             href="#home"
+            onClick={handleLinkClick}
             className="text-xs sm:text-sm font-semibold tracking-wider uppercase text-[var(--text-main)] hover:text-[var(--primary-blue)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-blue)] rounded-md px-2 py-1"
           >
             PORTFOLIO
