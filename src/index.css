@@ -1,7 +1,78 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-surface: var(--bg-surface);
+  --color-border-color: var(--border-color);
+  --color-text-main: var(--text-main);
+  --color-text-muted: var(--text-muted);
+  --color-primary-blue: var(--primary-blue);
+  --color-primary-hover: var(--primary-hover);
+}
+
 @layer base {
   :root {
+    /* Design Tokens - Dark as default per PRD & design.md */
+    --bg-primary: #090D16;
+    --bg-surface: #111827;
+    --border-color: #1E293B;
+    --text-main: #F8FAFC;
+    --text-muted: #94A3B8;
+    --primary-blue: #3B82F6;
+    --primary-hover: #2563EB;
+    --primary-foreground: #FFFFFF;
+
+    /* Aurora Tokens (Dark Theme: Blue 700 / Blue 500) */
+    --aurora-primary: #1D4ED8;
+    --aurora-secondary: #3B82F6;
+    --aurora-opacity: 0.12;
+
+    /* shadcn/ui Semantic Token Mapping */
+    --background: var(--bg-primary);
+    --foreground: var(--text-main);
+    --card: var(--bg-surface);
+    --card-foreground: var(--text-main);
+    --popover: var(--bg-surface);
+    --popover-foreground: var(--text-main);
+    --primary: var(--primary-blue);
+    --secondary: #1E293B;
+    --secondary-foreground: #F8FAFC;
+    --muted: #1E293B;
+    --muted-foreground: var(--text-muted);
+    --accent: #1E293B;
+    --accent-foreground: #F8FAFC;
+    --destructive: #EF4444;
+    --destructive-foreground: #FFFFFF;
+    --border: var(--border-color);
+    --input: var(--border-color);
+    --ring: var(--primary-blue);
+  }
+
+  /* Light Theme */
+  .light {
     --bg-primary: #F8FAFC;
     --bg-surface: #FFFFFF;
     --border-color: #E2E8F0;
@@ -9,8 +80,35 @@
     --text-muted: #64748B;
     --primary-blue: #2563EB;
     --primary-hover: #1D4ED8;
+    --primary-foreground: #FFFFFF;
+
+    /* Aurora Tokens (Light Theme: Blue 300 / Blue 400) */
+    --aurora-primary: #93C5FD;
+    --aurora-secondary: #60A5FA;
+    --aurora-opacity: 0.08;
+
+    /* shadcn/ui Semantic Token Mapping */
+    --background: var(--bg-primary);
+    --foreground: var(--text-main);
+    --card: var(--bg-surface);
+    --card-foreground: var(--text-main);
+    --popover: var(--bg-surface);
+    --popover-foreground: var(--text-main);
+    --primary: var(--primary-blue);
+    --secondary: #F1F5F9;
+    --secondary-foreground: #0F172A;
+    --muted: #F1F5F9;
+    --muted-foreground: var(--text-muted);
+    --accent: #F1F5F9;
+    --accent-foreground: #0F172A;
+    --destructive: #EF4444;
+    --destructive-foreground: #FFFFFF;
+    --border: var(--border-color);
+    --input: var(--border-color);
+    --ring: var(--primary-blue);
   }
 
+  /* Dark Theme explicit class support */
   .dark {
     --bg-primary: #090D16;
     --bg-surface: #111827;
@@ -19,13 +117,54 @@
     --text-muted: #94A3B8;
     --primary-blue: #3B82F6;
     --primary-hover: #2563EB;
+    --primary-foreground: #FFFFFF;
+
+    --aurora-primary: #1D4ED8;
+    --aurora-secondary: #3B82F6;
+    --aurora-opacity: 0.12;
+
+    --background: var(--bg-primary);
+    --foreground: var(--text-main);
+    --card: var(--bg-surface);
+    --card-foreground: var(--text-main);
+    --popover: var(--bg-surface);
+    --popover-foreground: var(--text-main);
+    --primary: var(--primary-blue);
+    --secondary: #1E293B;
+    --secondary-foreground: #F8FAFC;
+    --muted: #1E293B;
+    --muted-foreground: var(--text-muted);
+    --accent: #1E293B;
+    --accent-foreground: #F8FAFC;
+    --destructive: #EF4444;
+    --destructive-foreground: #FFFFFF;
+    --border: var(--border-color);
+    --input: var(--border-color);
+    --ring: var(--primary-blue);
   }
 }
 
 body {
   background-color: var(--bg-primary);
   color: var(--text-main);
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-sans);
   overflow-x: hidden;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Accessibility Foundation */
+:focus-visible {
+  outline: 2px solid var(--primary-blue);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
