@@ -1,6 +1,8 @@
 import type { PortfolioData } from '@/types/portfolio';
-import portraitPlaceholder from '@/assets/profile/myPict.jpg';
-import projectPlaceholder from '@/assets/projects/project-placeholder.svg';
+import profilePhoto from '@/assets/profile/ari-wahyudi.jpg';
+import spkMooraScreenshot from '@/assets/projects/spk-moora.png';
+import tokoEskrimScreenshot from '@/assets/projects/toko-eskrim.png';
+import awVapestoreScreenshot from '@/assets/projects/aw-vapestore.png';
 
 /**
  * Portfolio Data Configuration
@@ -21,7 +23,7 @@ export const portfolioData: PortfolioData = {
     headline: 'Pengembangan Aplikasi Web Berbasis Database yang Terstruktur & Responsif.',
     subheadline:
       'Mahasiswa Teknik Informatika yang berfokus pada pembuatan aplikasi web fungsional menggunakan PHP, MySQL, dan antarmuka responsif.',
-    portraitUrl: portraitPlaceholder,
+    portraitUrl: profilePhoto,
 
     // About Section structured blocks
     shortIntro:
@@ -80,7 +82,7 @@ export const portfolioData: PortfolioData = {
       title: 'SPK Kelayakan Pemberian Kredit Anggota Koperasi Konsumen Serba Usaha menggunakan Metode MOORA',
       shortDescription:
         'Sistem pendukung keputusan berbasis web untuk membantu penilaian kelayakan pemberian kredit anggota koperasi menggunakan metode MOORA.',
-      thumbnail: projectPlaceholder,
+      thumbnail: spkMooraScreenshot,
       technologies: ['PHP', 'MySQL', 'Bootstrap', 'CSS'],
       githubUrl: undefined,
       demoUrl: undefined,
@@ -102,7 +104,7 @@ export const portfolioData: PortfolioData = {
       title: 'Toko Eskrim',
       shortDescription:
         'Aplikasi web untuk mendukung pengelolaan katalog produk, varian menu, dan proses pencatatan transaksi toko.',
-      thumbnail: projectPlaceholder,
+      thumbnail: tokoEskrimScreenshot,
       technologies: ['PHP', 'MySQL', 'Bootstrap', 'JavaScript', 'jQuery', 'JsQR', 'CSS'],
       githubUrl: undefined,
       demoUrl: undefined,
@@ -124,7 +126,7 @@ export const portfolioData: PortfolioData = {
       title: 'AW Vapestore',
       shortDescription:
         'Aplikasi manajemen toko dan inventaris dengan fitur monitoring stok, pemindaian QR code, serta interaksi tabel asinkronus.',
-      thumbnail: projectPlaceholder,
+      thumbnail: awVapestoreScreenshot,
       technologies: ['PHP', 'MySQL', 'Bootstrap', 'JavaScript', 'jQuery', 'AJAX', 'DataTables', 'JsQR', 'CSS'],
       githubUrl: undefined,
       demoUrl: undefined,

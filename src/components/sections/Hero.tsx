@@ -93,7 +93,7 @@ export function Hero() {
                     width={320}
                     height={320}
                     onError={() => setImageError(true)}
-                    className="w-full h-full object-cover rounded-xl transition-transform duration-500 group-hover:scale-103"
+                    className="w-full h-full object-cover object-top rounded-xl transition-transform duration-500 group-hover:scale-103"
                   />
                 ) : (
                   /* Elegant minimal fallback if profile asset fails to load */
