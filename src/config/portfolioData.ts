@@ -1,5 +1,5 @@
 import type { PortfolioData } from '@/types/portfolio';
-import portraitPlaceholder from '@/assets/profile/portrait-placeholder.svg';
+import portraitPlaceholder from '@/assets/profile/myPict.jpg';
 import projectPlaceholder from '@/assets/projects/project-placeholder.svg';
 
 /**
